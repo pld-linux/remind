@@ -23,7 +23,7 @@ proper handling of holidays. Available for UNIX, MS-DOS, OS/2, and
 other platforms. Includes scripts for making a nice WWW calendar
 server.
 
-%description
+%description -l pl
 W pe³ni funkcjonalny i wyposa¿ony kalendarz przypominaj±cy o zdarzeniach;
 mo¿liwo¶ci obejmuj± wyszukane operacje na datach, fazy ksiê¿yca, wschody
 i zachody s³oñca, kalendarz Hebrajski, alarmy, wyj¶cie w formacie
