@@ -1,7 +1,7 @@
 Summary:	Remind is a full-featured calendar/alarm program
-Summary(pl):	Remind jest kalendarzem przypominaj╠cym o zdarzeniach
+Summary(pl):	Remind - kalendarz przypominaj╠cy o zdarzeniach
 Summary(ru_RU.KOI8-R):	Полноценный органайзер
-Summary(uk_UA.KOI8-U):	Повноц╕нний ор╜анайзер
+Summary(uk):	Повноц╕нний ор╜анайзер
 Name:		remind
 Version:	03.00.22
 Release:	1
@@ -13,6 +13,8 @@ Source0:	http://roaringpenguin.com/penguin/%{name}-%{version}.tar.gz
 Patch0:		%{name}-alt.patch
 Patch1:		%{name}-missing_include.patch
 URL:		http://roaringpenguin.com/penguin/open_source_remind.php
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -24,12 +26,13 @@ other platforms. Includes scripts for making a nice WWW calendar
 server.
 
 %description -l pl
-W peЁni funkcjonalny i wyposa©ony kalendarz przypominaj╠cy o zdarzeniach;
-mo©liwo╤ci obejmuj╠ wyszukane operacje na datach, fazy ksiЙ©yca, wschody
-i zachody sЁoЯca, kalendarz Hebrajski, alarmy, wyj╤cie w formacie
-PostScript, graficzny interfejs w Tcl/Tk, wielojЙzyczne komunikaty i
-wЁa╤ciw╠ obsЁugЙ wakacji.  DostЙpny m.in. dla platform UNIX, MS-DOS, OS/2.
-Zawiera skrypty do tworzenia przyjemnego serwera WWW z kalendarzami.
+W peЁni funkcjonalny i wyposa©ony kalendarz przypominaj╠cy o
+zdarzeniach; mo©liwo╤ci obejmuj╠ wyszukane operacje na datach, fazy
+ksiЙ©yca, wschody i zachody sЁoЯca, kalendarz Hebrajski, alarmy,
+wyj╤cie w formacie PostScript, graficzny interfejs w Tcl/Tk,
+wielojЙzyczne komunikaty i wЁa╤ciw╠ obsЁugЙ wakacji. DostЙpny m.in.
+dla platform UNIX, MS-DOS, OS/2. Zawiera skrypty do tworzenia
+przyjemnego serwera WWW z kalendarzami.
 
 %description -l ru_RU.KOI8-R
 Полноценный органайзер с большими возможностями по манипуляции датами,
@@ -39,7 +42,7 @@ Zawiera skrypty do tworzenia przyjemnego serwera WWW z kalendarzami.
 доступна для UNIX, DOS, OS/2 и других платформ. Включает скрипты для
 создания функционального сервера календаринга.
 
-%description -l uk_UA.KOI8-U
+%description -l uk
 Повноц╕нний ор╜анайзер ╕з великими можливостями щодо ман╕пуляц╕╖
 датами, п╕дтримкою обчислення фаз м╕сяця та часу сходу та заходу
 сонця, ╓врейським календарем, попередженнями, виводом у PostScript,
@@ -75,14 +78,15 @@ tkremind - GUI dla remind w Tcl/Tk.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc ACKNOWLEDGEMENTS README docs/README.UNIX docs/WHATSNEW.30 remind.lsm www scripts/remind-all.sh
 %attr(755,root,root) %{_bindir}/[ckr]*
 %{_mandir}/man?/[ckr]*
-%doc ACKNOWLEDGEMENTS README docs/README.UNIX docs/WHATSNEW.30 remind.lsm www scripts/remind-all.sh
 
 %files tkremind
 %defattr(644,root,root,755)
