@@ -1,0 +1,61 @@
+--- src/types.h~	2004-10-17 14:27:48.000000000 +0200
++++ src/types.h	2004-10-17 14:28:05.000000000 +0200
+@@ -12,6 +12,7 @@
+ 
+ /* $Id$ */
+ 
++#include "custom.h"
+ #include "dynbuf.h"
+ 
+ /* Values */
+--- src/globals.h~	2000-02-18 04:45:57.000000000 +0100
++++ src/globals.h	2004-10-17 14:31:03.000000000 +0200
+@@ -14,6 +14,8 @@
+ 
+ /* $Id$ */
+ 
++#include "custom.h"
++
+ #ifdef MK_GLOBALS
+ #undef EXTERN
+ #define EXTERN
+--- src/queue.c~	2004-10-17 14:36:34.000000000 +0200
++++ src/queue.c	2004-10-17 14:37:05.000000000 +0200
+@@ -10,6 +10,7 @@
+ /*                                                             */
+ /***************************************************************/
+ 
++#include "custom.h"
+ #include "config.h"
+ static char const RCSID[] = "$Id$";
+ 
+--- src/rem2ps.h~	2004-10-17 14:42:37.000000000 +0200
++++ src/rem2ps.h	2004-10-17 14:42:43.000000000 +0200
+@@ -12,6 +12,8 @@
+ 
+ /* $Id$ */
+ 
++#include "custom.h"
++
+ char *PSProlog1[] =
+ {
+     "% This file was produced by Remind and Rem2PS, written by",
+--- src/Makefile.in~	2000-06-26 16:50:53.000000000 +0200
++++ src/Makefile.in	2004-10-17 14:56:25.000000000 +0200
+@@ -50,12 +50,12 @@
+ 
+ install: all
+ 	for prog in $(PROGS) $(SCRIPTS) ; do \
+-		$(INSTALL_PROGRAM) $$prog $(bindir) ; \
++		$(INSTALL_PROGRAM) $$prog $(DESTDIR)$(bindir) ; \
+ 	done
+-	-strip $(bindir)/remind
+-	-strip $(bindir)/rem2ps
++#	-strip $(DESTDIR)$(bindir)/remind
++#	-strip $(DESTDIR)$(bindir)/rem2ps
+ 	for man in $(MANS) ; do  \
+-		$(INSTALL_DATA) $$man $(mandir)/man1 ; \
++		$(INSTALL_DATA) $$man $(DESTDIR)$(mandir)/man1 ; \
+ 	done
+ 
+ clean:
