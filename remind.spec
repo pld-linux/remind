@@ -82,6 +82,9 @@ install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1}
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
+%clean
+rm -rf $RPM_BUILD_ROOT
+
 %files
 %defattr(644,root,root,755)
 %doc ACKNOWLEDGEMENTS README docs/README.UNIX docs/WHATSNEW.30 remind.lsm www scripts/remind-all.sh
