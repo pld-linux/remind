@@ -9,7 +9,6 @@ License:	GPL v2
 Group:		Applications
 Source0:	http://roaringpenguin.com/penguin/%{name}-%{version}.tar.gz
 # Source0-md5:	5655ad8209f8453443d0b95658cd82ca
-# Source0-size:	319556
 Patch0:		%{name}-alt.patch
 Patch1:		%{name}-missing_include.patch
 URL:		http://roaringpenguin.com/penguin/open_source_remind.php
