@@ -1,0 +1,259 @@
+diff -ruN remind-03.00.22.orig/scripts/remind-all.sh remind-03.00.22/scripts/remind-all.sh
+--- remind-03.00.22.orig/scripts/remind-all.sh	Fri Feb 18 05:45:39 2000
++++ remind-03.00.22/scripts/remind-all.sh	Sun Apr  7 00:47:20 2002
+@@ -31,17 +31,16 @@
+ # way of getting a list of users on the system
+ 
+ # Set the following variables as appropriate for your system
+-REMIND=/usr/local/bin/remind
+-MAIL=/usr/bin/mail
++REMIND=/usr/bin/remind
++MAIL=/bin/mail
+ RM="/bin/rm -f"
+ 
+-REMFILE=/tmp/RemFile.$$
+-
+ # Scan each user's directory for a .reminders file
+ for i in $USERS
+ do
+ HOME=`grep \^$i: /etc/passwd | awk -F: '{print $6}'`
+    if [ -r $HOME/.reminders ]; then
++      REMFILE=$HOME/tmp/RemFile.$$
+ 
+ #     echo "$i has a .reminders file."     DEBUGGING PURPOSES ONLY
+ 
+diff -ruN remind-03.00.22.orig/src/custom.h remind-03.00.22/src/custom.h
+--- remind-03.00.22.orig/src/custom.h	Mon Jun 26 17:52:33 2000
++++ remind-03.00.22/src/custom.h	Sun Apr  7 00:45:45 2002
+@@ -24,28 +24,226 @@
+ /*                                                                     */
+ /* The default values are initially set to Ottawa, Ontario, Canada.    */
+ /*---------------------------------------------------------------------*/
++
++#ifdef OTTAWA
+ #define LAT_DEG 45
+ #define LAT_MIN 24
+ #define LAT_SEC  0
+ #define LON_DEG 75
+ #define LON_MIN 39
+ #define LON_SEC  0
+-#define LOCATION "Ottawa"
++#define LOCATION "Ottawa, Canada"
++#endif /* OTTAWA */
++
++/* The data below were extracted from
++ * http://www.realestate3d.com/gps/world-latlong.htm
++ * and converted over by Michael Shigorin <mike@alt-linux.org>
++ */
++
++#ifdef ANADYR
++#define LAT_DEG 64
++#define LAT_MIN 50
++#define LAT_SEC  0
++#define LON_DEG -177
++#define LON_MIN -50
++#define LON_SEC  0
++#define LOCATION "Anadyr, Russia"
++#endif /* ANADYR */
++
++#ifdef ARKHANGELSK
++#define LAT_DEG 64
++#define LAT_MIN 32
++#define LAT_SEC  0
++#define LON_DEG -40
++#define LON_MIN -40
++#define LON_SEC  0
++#define LOCATION "Arkhangelsk, Russia"
++#endif /* ARKHANGELSK */
++
++#ifdef ASHKHABAD
++#define LAT_DEG 37
++#define LAT_MIN 58
++#define LAT_SEC  0
++#define LON_DEG -58
++#define LON_MIN -24
++#define LON_SEC  0
++#define LOCATION "Ashkhabad, Turkmenis"
++#endif /* ASHKHABAD */
++
++#ifdef BAKU
++#define LAT_DEG 40
++#define LAT_MIN 22
++#define LAT_SEC  0
++#define LON_DEG -49
++#define LON_MIN -53
++#define LON_SEC  0
++#define LOCATION "Baku, Azerbaijan"
++#endif /* BAKU */
++
++#ifdef BARNAUL
++#define LAT_DEG 53
++#define LAT_MIN 21
++#define LAT_SEC  0
++#define LON_DEG -83
++#define LON_MIN -45
++#define LON_SEC  0
++#define LOCATION "Barnaul, Russia"
++#endif /* BARNAUL */
++
++#ifdef CHITA
++#define LAT_DEG 52
++#define LAT_MIN 03
++#define LAT_SEC  0
++#define LON_DEG -113
++#define LON_MIN -35
++#define LON_SEC  0
++#define LOCATION "Chita, Russia"
++#endif /* CHITA */
++
++#ifdef IGARKA
++#define LAT_DEG 67
++#define LAT_MIN 31
++#define LAT_SEC  0
++#define LON_DEG -86
++#define LON_MIN -33
++#define LON_SEC  0
++#define LOCATION "Igarka, Russia"
++#endif /* IGARKA */
++
++#ifdef KIEV
++#define LAT_DEG 50
++#define LAT_MIN 25
++#define LAT_SEC  0
++#define LON_DEG -133
++#define LON_MIN -43
++#define LON_SEC  0
++#define LOCATION "Kiev, Ukraine"
++#endif /* KIEV */
++
++#ifdef KRASNODAR
++#define LAT_DEG 45
++#define LAT_MIN 02
++#define LAT_SEC  0
++#define LON_DEG -39
++#define LON_MIN -00
++#define LON_SEC  0
++#define LOCATION "Krasnodar, Russia"
++#endif /* KRASNODAR */
++
++#ifdef MAGDAGACHI
++#define LAT_DEG 53
++#define LAT_MIN 27
++#define LAT_SEC  0
++#define LON_DEG -125
++#define LON_MIN -44
++#define LON_SEC  0
++#define LOCATION "Magdagachi, Russia"
++#endif /* MAGDAGACHI */
++
++#ifdef MOSCOW
++#define LAT_DEG 55
++#define LAT_MIN 45
++#define LAT_SEC  0
++#define LON_DEG -37
++#define LON_MIN -42
++#define LON_SEC  0
++#define LOCATION "Moscow, Russia"
++#endif /* MOSCOW */
++
++#ifdef PERM
++#define LAT_DEG 58
++#define LAT_MIN 01
++#define LAT_SEC  0
++#define LON_DEG -56
++#define LON_MIN -10
++#define LON_SEC  0
++#define LOCATION "Perm, Russia"
++#endif /* PERM */
++
++#ifdef PETROPAVLOVSK
++#define LAT_DEG 54
++#define LAT_MIN 53
++#define LAT_SEC  0
++#define LON_DEG -69
++#define LON_MIN -13
++#define LON_SEC  0
++#define LOCATION "Petropavlovsk, Kazakhstan"
++#endif /* PETROPAVLOVSK */
++
++#ifdef RIGA
++#define LAT_DEG 56
++#define LAT_MIN 40
++#define LAT_SEC  0
++#define LON_DEG -106
++#define LON_MIN -10
++#define LON_SEC  0
++#define LOCATION "Riga, Latvia"
++#endif /* RIGA */
++
++#ifdef SARATOV
++#define LAT_DEG 51
++#define LAT_MIN 30
++#define LAT_SEC  0
++#define LON_DEG -45
++#define LON_MIN -55
++#define LON_SEC  0
++#define LOCATION "Saratov, Russia"
++#endif /* SARATOV */
++
++#ifdef TASHKENT
++#define LAT_DEG 41
++#define LAT_MIN 16
++#define LAT_SEC  0
++#define LON_DEG -69
++#define LON_MIN -13
++#define LON_SEC  0
++#define LOCATION "Tashkent, Uzbekistan"
++#endif /* TASHKENT */
++
++#ifdef VLADIVOSTOK
++#define LAT_DEG 43
++#define LAT_MIN 09
++#define LAT_SEC  0
++#define LON_DEG -131
++#define LON_MIN -53
++#define LON_SEC  0
++#define LOCATION "Vladivostok, Russia"
++#endif /* VLADIVOSTOK */
++
++#ifdef VORKUTA
++#define LAT_DEG 67
++#define LAT_MIN 27
++#define LAT_SEC  0
++#define LON_DEG -64
++#define LON_MIN -00
++#define LON_SEC  0
++#define LOCATION "Vorkuta, Russia"
++#endif /* VORKUTA */
++
++#ifdef YAKUTSK
++#define LAT_DEG 62
++#define LAT_MIN 10
++#define LAT_SEC  0
++#define LON_DEG -129
++#define LON_MIN -50
++#define LON_SEC  0
++#define LOCATION "Yakutsk, Russia"
++#endif /* YAKUTSK */
+ 
+ /*---------------------------------------------------------------------*/
+ /* DEFAULT_PAGE:  The default page size to use for Rem2PS.             */
+ /* The Letter version is appropriate for North America; the A4 version */
+ /* is appropriate for Europe.                                          */
+ /*---------------------------------------------------------------------*/
+-#define DEFAULT_PAGE {"Letter", 612, 792}
+-/* #define DEFAULT_PAGE {"A4", 595, 842} */
++/* #define DEFAULT_PAGE {"Letter", 612, 792} */
++#define DEFAULT_PAGE {"A4", 595, 842} 
+   
+ /*---------------------------------------------------------------------*/
+ /* DATESEP:  The default date separator.  North American usage is '/'; */
+ /* others may prefer '-'.                                              */
+ /*---------------------------------------------------------------------*/
+-#define DATESEP '/'
+-/* #define DATESEP '-' */
++/* #define DATESEP '/' */
++#define DATESEP '-'
+ 
+ /*---------------------------------------------------------------------*/
+ /* TIMESEP:  The default time separator.  North American usage is ':'; */
