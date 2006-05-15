@@ -1,6 +1,6 @@
 Summary:	Remind is a full-featured calendar/alarm program
 Summary(pl):	Remind - kalendarz przypominaj╠cy o zdarzeniach
-Summary(ru_RU.KOI8-R):	Полноценный органайзер
+Summary(ru):	Полноценный органайзер
 Summary(uk):	Повноц╕нний ор╜анайзер
 Name:		remind
 Version:	03.00.22
@@ -33,7 +33,7 @@ wielojЙzyczne komunikaty i wЁa╤ciw╠ obsЁugЙ wakacji. DostЙpny m.in.
 dla platform UNIX, MS-DOS, OS/2. Zawiera skrypty do tworzenia
 przyjemnego serwera WWW z kalendarzami.
 
-%description -l ru_RU.KOI8-R
+%description -l ru
 Полноценный органайзер с большими возможностями по манипуляции датами,
 поддержкой вычисления фаз луны и времени заката/восхода, еврейским
 календарем, предупреждениями, выводом в PostScript, дополнительным
