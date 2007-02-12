@@ -1,7 +1,7 @@
 Summary:	Remind is a full-featured calendar/alarm program
-Summary(pl.UTF-8):   Remind - kalendarz przypominający o zdarzeniach
-Summary(ru.UTF-8):   Полноценный органайзер
-Summary(uk.UTF-8):   Повноцінний орґанайзер
+Summary(pl.UTF-8):	Remind - kalendarz przypominający o zdarzeniach
+Summary(ru.UTF-8):	Полноценный органайзер
+Summary(uk.UTF-8):	Повноцінний орґанайзер
 Name:		remind
 Version:	03.00.22
 Release:	1
@@ -51,7 +51,7 @@ przyjemnego serwera WWW z kalendarzami.
 
 %package tkremind
 Summary:	tkremind - Tcl/Tk GUI front-end for remind
-Summary(pl.UTF-8):   tkremind - GUI dla remind w Tcl/Tk
+Summary(pl.UTF-8):	tkremind - GUI dla remind w Tcl/Tk
 Group:		Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	tk
