@@ -1,7 +1,7 @@
 Summary:	Remind is a full-featured calendar/alarm program
-Summary(pl):	Remind - kalendarz przypominaj╠cy o zdarzeniach
-Summary(ru):	Полноценный органайзер
-Summary(uk):	Повноц╕нний ор╜анайзер
+Summary(pl.UTF-8):   Remind - kalendarz przypominajд┘cy o zdarzeniach
+Summary(ru.UTF-8):   п÷п╬п╩п╫п╬я├п╣п╫п╫я▀п╧ п╬я─пЁп╟п╫п╟п╧п╥п╣я─
+Summary(uk.UTF-8):   п÷п╬п╡п╫п╬я├я√п╫п╫п╦п╧ п╬я─р▒п╟п╫п╟п╧п╥п╣я─
 Name:		remind
 Version:	03.00.22
 Release:	1
@@ -24,34 +24,34 @@ proper handling of holidays. Available for UNIX, MS-DOS, OS/2, and
 other platforms. Includes scripts for making a nice WWW calendar
 server.
 
-%description -l pl
-W peЁni funkcjonalny i wyposa©ony kalendarz przypominaj╠cy o
-zdarzeniach; mo©liwo╤ci obejmuj╠ wyszukane operacje na datach, fazy
-ksiЙ©yca, wschody i zachody sЁoЯca, kalendarz Hebrajski, alarmy,
-wyj╤cie w formacie PostScript, graficzny interfejs w Tcl/Tk,
-wielojЙzyczne komunikaty i wЁa╤ciw╠ obsЁugЙ wakacji. DostЙpny m.in.
+%description -l pl.UTF-8
+W peе┌ni funkcjonalny i wyposaе╪ony kalendarz przypominajд┘cy o
+zdarzeniach; moе╪liwoе⌡ci obejmujд┘ wyszukane operacje na datach, fazy
+ksiд≥е╪yca, wschody i zachody sе┌oе└ca, kalendarz Hebrajski, alarmy,
+wyjе⌡cie w formacie PostScript, graficzny interfejs w Tcl/Tk,
+wielojд≥zyczne komunikaty i wе┌aе⌡ciwд┘ obsе┌ugд≥ wakacji. Dostд≥pny m.in.
 dla platform UNIX, MS-DOS, OS/2. Zawiera skrypty do tworzenia
 przyjemnego serwera WWW z kalendarzami.
 
-%description -l ru
-Полноценный органайзер с большими возможностями по манипуляции датами,
-поддержкой вычисления фаз луны и времени заката/восхода, еврейским
-календарем, предупреждениями, выводом в PostScript, дополнительным
-графическим интерфейсом и надлежащей поддержкой праздников. Программа
-доступна для UNIX, DOS, OS/2 и других платформ. Включает скрипты для
-создания функционального сервера календаринга.
+%description -l ru.UTF-8
+п÷п╬п╩п╫п╬я├п╣п╫п╫я▀п╧ п╬я─пЁп╟п╫п╟п╧п╥п╣я─ я│ п╠п╬п╩я▄я┬п╦п╪п╦ п╡п╬п╥п╪п╬п╤п╫п╬я│я┌я▐п╪п╦ п©п╬ п╪п╟п╫п╦п©я┐п╩я▐я├п╦п╦ п╢п╟я┌п╟п╪п╦,
+п©п╬п╢п╢п╣я─п╤п╨п╬п╧ п╡я▀я┤п╦я│п╩п╣п╫п╦я▐ я└п╟п╥ п╩я┐п╫я▀ п╦ п╡я─п╣п╪п╣п╫п╦ п╥п╟п╨п╟я┌п╟/п╡п╬я│я┘п╬п╢п╟, п╣п╡я─п╣п╧я│п╨п╦п╪
+п╨п╟п╩п╣п╫п╢п╟я─п╣п╪, п©я─п╣п╢я┐п©я─п╣п╤п╢п╣п╫п╦я▐п╪п╦, п╡я▀п╡п╬п╢п╬п╪ п╡ PostScript, п╢п╬п©п╬п╩п╫п╦я┌п╣п╩я▄п╫я▀п╪
+пЁя─п╟я└п╦я┤п╣я│п╨п╦п╪ п╦п╫я┌п╣я─я└п╣п╧я│п╬п╪ п╦ п╫п╟п╢п╩п╣п╤п╟я┴п╣п╧ п©п╬п╢п╢п╣я─п╤п╨п╬п╧ п©я─п╟п╥п╢п╫п╦п╨п╬п╡. п÷я─п╬пЁя─п╟п╪п╪п╟
+п╢п╬я│я┌я┐п©п╫п╟ п╢п╩я▐ UNIX, DOS, OS/2 п╦ п╢я─я┐пЁп╦я┘ п©п╩п╟я┌я└п╬я─п╪. п▓п╨п╩я▌я┤п╟п╣я┌ я│п╨я─п╦п©я┌я▀ п╢п╩я▐
+я│п╬п╥п╢п╟п╫п╦я▐ я└я┐п╫п╨я├п╦п╬п╫п╟п╩я▄п╫п╬пЁп╬ я│п╣я─п╡п╣я─п╟ п╨п╟п╩п╣п╫п╢п╟я─п╦п╫пЁп╟.
 
-%description -l uk
-Повноц╕нний ор╜анайзер ╕з великими можливостями щодо ман╕пуляц╕╖
-датами, п╕дтримкою обчислення фаз м╕сяця та часу сходу та заходу
-сонця, ╓врейським календарем, попередженнями, виводом у PostScript,
-додатковим граф╕чним ╕нтерфейсом та належною п╕дтримкою свят. Програма
-доступна для UNIX, DOS, OS/2 та ╕нших платформ. Включа╓ скрипти для
-створення функц╕онального серверу календарин╜а.
+%description -l uk.UTF-8
+п÷п╬п╡п╫п╬я├я√п╫п╫п╦п╧ п╬я─р▒п╟п╫п╟п╧п╥п╣я─ я√п╥ п╡п╣п╩п╦п╨п╦п╪п╦ п╪п╬п╤п╩п╦п╡п╬я│я┌я▐п╪п╦ я┴п╬п╢п╬ п╪п╟п╫я√п©я┐п╩я▐я├я√я≈
+п╢п╟я┌п╟п╪п╦, п©я√п╢я┌я─п╦п╪п╨п╬я▌ п╬п╠я┤п╦я│п╩п╣п╫п╫я▐ я└п╟п╥ п╪я√я│я▐я├я▐ я┌п╟ я┤п╟я│я┐ я│я┘п╬п╢я┐ я┌п╟ п╥п╟я┘п╬п╢я┐
+я│п╬п╫я├я▐, я■п╡я─п╣п╧я│я▄п╨п╦п╪ п╨п╟п╩п╣п╫п╢п╟я─п╣п╪, п©п╬п©п╣я─п╣п╢п╤п╣п╫п╫я▐п╪п╦, п╡п╦п╡п╬п╢п╬п╪ я┐ PostScript,
+п╢п╬п╢п╟я┌п╨п╬п╡п╦п╪ пЁя─п╟я└я√я┤п╫п╦п╪ я√п╫я┌п╣я─я└п╣п╧я│п╬п╪ я┌п╟ п╫п╟п╩п╣п╤п╫п╬я▌ п©я√п╢я┌я─п╦п╪п╨п╬я▌ я│п╡я▐я┌. п÷я─п╬пЁя─п╟п╪п╟
+п╢п╬я│я┌я┐п©п╫п╟ п╢п╩я▐ UNIX, DOS, OS/2 я┌п╟ я√п╫я┬п╦я┘ п©п╩п╟я┌я└п╬я─п╪. п▓п╨п╩я▌я┤п╟я■ я│п╨я─п╦п©я┌п╦ п╢п╩я▐
+я│я┌п╡п╬я─п╣п╫п╫я▐ я└я┐п╫п╨я├я√п╬п╫п╟п╩я▄п╫п╬пЁп╬ я│п╣я─п╡п╣я─я┐ п╨п╟п╩п╣п╫п╢п╟я─п╦п╫р▒п╟.
 
 %package tkremind
 Summary:	tkremind - Tcl/Tk GUI front-end for remind
-Summary(pl):	tkremind - GUI dla remind w Tcl/Tk
+Summary(pl.UTF-8):   tkremind - GUI dla remind w Tcl/Tk
 Group:		Applications
 Requires:	%{name} = %{version}-%{release}
 Requires:	tk
@@ -59,7 +59,7 @@ Requires:	tk
 %description tkremind
 tkremind - Tcl/Tk GUI front-end for remind.
 
-%description tkremind -l pl
+%description tkremind -l pl.UTF-8
 tkremind - GUI dla remind w Tcl/Tk.
 
 %prep
