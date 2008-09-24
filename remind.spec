@@ -3,15 +3,15 @@ Summary(pl.UTF-8):	Remind - kalendarz przypominający o zdarzeniach
 Summary(ru.UTF-8):	Полноценный органайзер
 Summary(uk.UTF-8):	Повноцінний орґанайзер
 Name:		remind
-Version:	03.00.22
+Version:	03.01.05
 Release:	1
 License:	GPL v2
 Group:		Applications
-Source0:	http://roaringpenguin.com/penguin/%{name}-%{version}.tar.gz
-# Source0-md5:	5655ad8209f8453443d0b95658cd82ca
-Patch0:		%{name}-alt.patch
+Source0:	http://www.roaringpenguin.com/files/download/%{name}-%{version}.tar.gz
+# Source0-md5:	9ef64598f8182e7482d9399856474f44
+Patch0:		%{name}-fix_paths.patch
 Patch1:		%{name}-missing_include.patch
-URL:		http://roaringpenguin.com/penguin/open_source_remind.php
+URL:		http://www.roaringpenguin.com/products/remind
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -64,8 +64,8 @@ tkremind - GUI dla remind w Tcl/Tk.
 
 %prep
 %setup -q
-#%patch0 -p1
-%patch1 -p0
+%patch0 -p1
+%patch1 -p1
 
 %build
 %{__aclocal}
@@ -86,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ACKNOWLEDGEMENTS README docs/README.UNIX docs/WHATSNEW.30 remind.lsm www scripts/remind-all.sh
+%doc README docs/README.UNIX docs/WHATSNEW www 
 %attr(755,root,root) %{_bindir}/[ckr]*
 %{_mandir}/man?/[ckr]*
 
