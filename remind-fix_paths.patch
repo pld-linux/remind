@@ -1,0 +1,57 @@
+diff -burNp remind-03.01.05/build.tk remind-03.01.05_new/build.tk
+--- remind-03.01.05/build.tk	2007-09-04 03:38:16.000000000 +0200
++++ remind-03.01.05_new/build.tk	2008-09-24 10:09:37.044826251 +0200
+@@ -41,8 +41,8 @@ proc SetConfigDefaults {} {
+     set Config(NORTHERN_HEMISPHERE) 1
+     set Config(WESTERN_HEMISPHERE) 1
+     set Config(LANGUAGE) "English"
+-    set Config(INST_DIR) "/usr/local/bin"
+-    set Config(MAN_DIR) "/usr/local/man"
++    set Config(INST_DIR) "/usr/bin"
++    set Config(MAN_DIR) "/usr/man"
+ }
+ 
+ #***********************************************************************
+@@ -886,7 +886,7 @@ proc doLogo {} {
+ #***********************************************************************
+ proc FindRemind {} {
+     global env
+-    set path [concat [split $env(PATH) ":"] "/bin" "/usr/bin" "/usr/local/bin"]
++    set path [concat [split $env(PATH) ":"] "/bin" "/usr/bin"]
+     foreach thing $path {
+ 	if [file executable [file join $thing "remind"]] {
+ 	    return [file join $thing "remind"]
+@@ -912,8 +912,8 @@ proc SetConfigFromRemind {} {
+     }
+     set dir [file dirname $rem]
+     set Config(INST_DIR) $dir
+-    if {"$dir" == "/usr/local/bin"} {
+-	set Config(MAN_DIR) "/usr/local/man"
++    if {"$dir" == "/usr/bin"} {
++	set Config(MAN_DIR) "/usr/man"
+     } elseif {$dir == "/usr/bin"} {
+ 	set Config(MAN_DIR) "/usr/share/man"
+     }
+@@ -923,8 +923,8 @@ proc SetConfigFromRemind {} {
+ 	set Config(MAN_DIR) "/usr/share/man"
+     } elseif {[file readable "/usr/man/man1/remind.1"]} {
+ 	set Config(MAN_DIR) "/usr/man"
+-    } elseif {[file readable "/usr/local/man/man1/remind.1"]} {
+-	set Config(MAN_DIR) "/usr/local/man"
++    } elseif {[file readable "/usr/man/man1/remind.1"]} {
++	set Config(MAN_DIR) "/usr/man"
+     }
+ 
+     # Query Remind for the rest
+diff -burNp remind-03.01.05/docs/README.UNIX remind-03.01.05_new/docs/README.UNIX
+--- remind-03.01.05/docs/README.UNIX	2007-08-16 05:19:14.000000000 +0200
++++ remind-03.01.05_new/docs/README.UNIX	2008-09-24 10:13:35.811367835 +0200
+@@ -90,7 +90,7 @@ This Tcl script is a slightly modified v
+ Norman Walsh.
+ 
+ -------------- Cut Here ---------- Cut Here ---------- Cut Here -------------
+-#!/usr/local/bin/wish
++#!/usr/bin/wish
+ wm withdraw .
+ after 15000 { destroy . ; exit }
+ tk_dialog .d { Message } $argv warning 0 { OK } 
