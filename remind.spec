@@ -3,12 +3,12 @@ Summary(pl.UTF-8):	Remind - kalendarz przypominający o zdarzeniach
 Summary(ru.UTF-8):	Полноценный органайзер
 Summary(uk.UTF-8):	Повноцінний орґанайзер
 Name:		remind
-Version:	03.01.05
+Version:	03.01.06
 Release:	1
 License:	GPL v2
 Group:		Applications
 Source0:	http://www.roaringpenguin.com/files/download/%{name}-%{version}.tar.gz
-# Source0-md5:	9ef64598f8182e7482d9399856474f44
+# Source0-md5:	65e5052ebdeeb31689bc68e7854150d5
 Patch0:		%{name}-fix_paths.patch
 Patch1:		%{name}-missing_include.patch
 URL:		http://www.roaringpenguin.com/products/remind
